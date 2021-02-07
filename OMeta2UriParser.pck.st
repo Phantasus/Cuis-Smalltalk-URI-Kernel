@@ -1,40 +1,40 @@
-'From Cuis 5.0 [latest update: #4112] on 21 April 2020 at 8:11:53 pm'!
+'From Cuis 5.0 [latest update: #4526] on 7 February 2021 at 2:46:16 pm'!
 'Description An implementation of an URI parser using OMeta2. Implements an actual parser as required by the URI-Kernel.
 
 Author: Josef Philip Bernhart <cuis-packages@phantasus.at>
 License: MIT'!
-!provides: 'OMeta2UriParser' 1 5!
-SystemOrganization addCategory: #'OMeta2UriParser-Tests'!
-SystemOrganization addCategory: #OMeta2UriParser!
+!provides: 'OMeta2UriParser' 1 6!
+SystemOrganization addCategory: 'OMeta2UriParser-Tests'!
+SystemOrganization addCategory: 'OMeta2UriParser'!
 
 
-!classDefinition: #OMeta2Rfc3986ParserTest category: #'OMeta2UriParser-Tests'!
+!classDefinition: #OMeta2Rfc3986ParserTest category: 'OMeta2UriParser-Tests'!
 TestCase subclass: #OMeta2Rfc3986ParserTest
 	instanceVariableNames: 'usedClass'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'OMeta2UriParser-Tests'!
-!classDefinition: 'OMeta2Rfc3986ParserTest class' category: #'OMeta2UriParser-Tests'!
+!classDefinition: 'OMeta2Rfc3986ParserTest class' category: 'OMeta2UriParser-Tests'!
 OMeta2Rfc3986ParserTest class
 	instanceVariableNames: ''!
 
-!classDefinition: #OMeta2Rfc3986Parser category: #OMeta2UriParser!
+!classDefinition: #OMeta2Rfc3986Parser category: 'OMeta2UriParser'!
 OMeta2 subclass: #OMeta2Rfc3986Parser
 	instanceVariableNames: 'components'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'OMeta2UriParser'!
-!classDefinition: 'OMeta2Rfc3986Parser class' category: #OMeta2UriParser!
+!classDefinition: 'OMeta2Rfc3986Parser class' category: 'OMeta2UriParser'!
 OMeta2Rfc3986Parser class
 	instanceVariableNames: ''!
 
-!classDefinition: #OMeta2Rfc3986UriHandler category: #OMeta2UriParser!
+!classDefinition: #OMeta2Rfc3986UriHandler category: 'OMeta2UriParser'!
 Object subclass: #OMeta2Rfc3986UriHandler
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'OMeta2UriParser'!
-!classDefinition: 'OMeta2Rfc3986UriHandler class' category: #OMeta2UriParser!
+!classDefinition: 'OMeta2Rfc3986UriHandler class' category: 'OMeta2UriParser'!
 OMeta2Rfc3986UriHandler class
 	instanceVariableNames: ''!
 
@@ -822,6 +822,15 @@ matchUri: collectionOrString
 	[ self matchAll: collectionOrString with: #uriReference ] on: OM2Fail do: [ ^false ].
 	
 	^true! !
+
+!OMeta2Rfc3986Parser class methodsFor: 'parsing' stamp: 'jpb 2/7/2021 14:43:39'!
+parseAuthority: collectionOrString into: uriStore
+	"Returns true if the given string looks like an uri"
+	| parser |
+	
+	[ parser _ self matchAll: collectionOrString with: #authority ] on: OM2Fail do: [ ^false ].
+	
+	parser storeComponentsInto: uriStore! !
 
 !OMeta2Rfc3986Parser class methodsFor: 'parsing' stamp: 'jpb 1/6/2020 17:10:17'!
 parseUri: uriString into: uriStore

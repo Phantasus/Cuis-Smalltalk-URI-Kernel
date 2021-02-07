@@ -1,128 +1,128 @@
-'From Cuis 5.0 [latest update: #4112] on 21 April 2020 at 7:39:18 pm'!
+'From Cuis 5.0 [latest update: #4526] on 7 February 2021 at 4:38:01 pm'!
 'Description Author: Josef Philip Bernhart <cuis-packages@phantasus.at>
 License: MIT License'!
-!provides: 'URI-Kernel' 1 15!
-SystemOrganization addCategory: #'URI-Kernel'!
-SystemOrganization addCategory: #'URI-Kernel-Tests'!
+!provides: 'URI-Kernel' 1 18!
+SystemOrganization addCategory: 'URI-Kernel'!
+SystemOrganization addCategory: 'URI-Kernel-Tests'!
 
 
-!classDefinition: #FileUriTests category: #'URI-Kernel-Tests'!
+!classDefinition: #FileUriTests category: 'URI-Kernel-Tests'!
 TestCase subclass: #FileUriTests
 	instanceVariableNames: 'usedClass'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'URI-Kernel-Tests'!
-!classDefinition: 'FileUriTests class' category: #'URI-Kernel-Tests'!
+!classDefinition: 'FileUriTests class' category: 'URI-Kernel-Tests'!
 FileUriTests class
 	instanceVariableNames: ''!
 
-!classDefinition: #GenericUriTests category: #'URI-Kernel-Tests'!
+!classDefinition: #GenericUriTests category: 'URI-Kernel-Tests'!
 TestCase subclass: #GenericUriTests
 	instanceVariableNames: 'usedClass'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'URI-Kernel-Tests'!
-!classDefinition: 'GenericUriTests class' category: #'URI-Kernel-Tests'!
+!classDefinition: 'GenericUriTests class' category: 'URI-Kernel-Tests'!
 GenericUriTests class
 	instanceVariableNames: ''!
 
-!classDefinition: #Rfc3986PercentEncoderTest category: #'URI-Kernel-Tests'!
+!classDefinition: #Rfc3986PercentEncoderTest category: 'URI-Kernel-Tests'!
 TestCase subclass: #Rfc3986PercentEncoderTest
 	instanceVariableNames: 'usedClass'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'URI-Kernel-Tests'!
-!classDefinition: 'Rfc3986PercentEncoderTest class' category: #'URI-Kernel-Tests'!
+!classDefinition: 'Rfc3986PercentEncoderTest class' category: 'URI-Kernel-Tests'!
 Rfc3986PercentEncoderTest class
 	instanceVariableNames: ''!
 
-!classDefinition: #Rfc3986SegmentRemoverTest category: #'URI-Kernel-Tests'!
+!classDefinition: #Rfc3986SegmentRemoverTest category: 'URI-Kernel-Tests'!
 TestCase subclass: #Rfc3986SegmentRemoverTest
 	instanceVariableNames: 'usedClass'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'URI-Kernel-Tests'!
-!classDefinition: 'Rfc3986SegmentRemoverTest class' category: #'URI-Kernel-Tests'!
+!classDefinition: 'Rfc3986SegmentRemoverTest class' category: 'URI-Kernel-Tests'!
 Rfc3986SegmentRemoverTest class
 	instanceVariableNames: ''!
 
-!classDefinition: #GenericUri category: #'URI-Kernel'!
+!classDefinition: #GenericUri category: 'URI-Kernel'!
 Object subclass: #GenericUri
 	instanceVariableNames: 'implementation'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'URI-Kernel'!
-!classDefinition: 'GenericUri class' category: #'URI-Kernel'!
+!classDefinition: 'GenericUri class' category: 'URI-Kernel'!
 GenericUri class
 	instanceVariableNames: ''!
 
-!classDefinition: #FileUri category: #'URI-Kernel'!
+!classDefinition: #FileUri category: 'URI-Kernel'!
 GenericUri subclass: #FileUri
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'URI-Kernel'!
-!classDefinition: 'FileUri class' category: #'URI-Kernel'!
+!classDefinition: 'FileUri class' category: 'URI-Kernel'!
 FileUri class
 	instanceVariableNames: ''!
 
-!classDefinition: #Rfc3986GenericUri category: #'URI-Kernel'!
+!classDefinition: #Rfc3986GenericUri category: 'URI-Kernel'!
 Object subclass: #Rfc3986GenericUri
 	instanceVariableNames: 'uriScheme uriUserinfo uriAuthority uriPath uriHost uriPort uriFragment uriQuery'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'URI-Kernel'!
-!classDefinition: 'Rfc3986GenericUri class' category: #'URI-Kernel'!
+!classDefinition: 'Rfc3986GenericUri class' category: 'URI-Kernel'!
 Rfc3986GenericUri class
 	instanceVariableNames: ''!
 
-!classDefinition: #Rfc3986PercentEncoder category: #'URI-Kernel'!
+!classDefinition: #Rfc3986PercentEncoder category: 'URI-Kernel'!
 Object subclass: #Rfc3986PercentEncoder
 	instanceVariableNames: 'utf8Bytes'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'URI-Kernel'!
-!classDefinition: 'Rfc3986PercentEncoder class' category: #'URI-Kernel'!
+!classDefinition: 'Rfc3986PercentEncoder class' category: 'URI-Kernel'!
 Rfc3986PercentEncoder class
 	instanceVariableNames: ''!
 
-!classDefinition: #Rfc3986SegmentRemover category: #'URI-Kernel'!
+!classDefinition: #Rfc3986SegmentRemover category: 'URI-Kernel'!
 Object subclass: #Rfc3986SegmentRemover
 	instanceVariableNames: 'inputBuffer outputBuffer'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'URI-Kernel'!
-!classDefinition: 'Rfc3986SegmentRemover class' category: #'URI-Kernel'!
+!classDefinition: 'Rfc3986SegmentRemover class' category: 'URI-Kernel'!
 Rfc3986SegmentRemover class
 	instanceVariableNames: ''!
 
-!classDefinition: #Rfc3986UriBuilder category: #'URI-Kernel'!
+!classDefinition: #Rfc3986UriBuilder category: 'URI-Kernel'!
 Object subclass: #Rfc3986UriBuilder
 	instanceVariableNames: 'referenceUri baseUri'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'URI-Kernel'!
-!classDefinition: 'Rfc3986UriBuilder class' category: #'URI-Kernel'!
+!classDefinition: 'Rfc3986UriBuilder class' category: 'URI-Kernel'!
 Rfc3986UriBuilder class
 	instanceVariableNames: ''!
 
-!classDefinition: #UnknownUri category: #'URI-Kernel'!
+!classDefinition: #UnknownUri category: 'URI-Kernel'!
 Object subclass: #UnknownUri
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'URI-Kernel'!
-!classDefinition: 'UnknownUri class' category: #'URI-Kernel'!
+!classDefinition: 'UnknownUri class' category: 'URI-Kernel'!
 UnknownUri class
 	instanceVariableNames: ''!
 
-!classDefinition: #UriRegistry category: #'URI-Kernel'!
+!classDefinition: #UriRegistry category: 'URI-Kernel'!
 Object subclass: #UriRegistry
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'URI-Kernel'!
-!classDefinition: 'UriRegistry class' category: #'URI-Kernel'!
+!classDefinition: 'UriRegistry class' category: 'URI-Kernel'!
 UriRegistry class
 	instanceVariableNames: ''!
 
@@ -414,6 +414,22 @@ testStrictParserRelativeUrlResolution
 	self assert: 'http:g' equals: (base join: 'http:g') asString.
 ! !
 
+!GenericUriTests methodsFor: 'as yet unclassified' stamp: 'jpb 2/7/2021 14:34:37'!
+testStrictParserRelativeUrlResolution2
+	"Tests the strict parsing of the generic uri as the intention is NOT support old broken parsing issues with older specifications"
+	| base redirectUri joined |
+	base _ usedClass fromString: 'gemini://gemini.conman.org/test/torture'.
+	redirectUri _ usedClass fromString: '/test/torture/001'.
+	joined _ base join: redirectUri.
+	
+	self assert: 'gemini' equals: (joined at: #scheme).
+	self assert: nil equals: (joined at: #port).
+	self assert: '/test/torture/001' equals: (joined at: #path).
+	
+	self assert: 'gemini.conman.org' equals: (joined at: #host).
+	self assert: 'gemini.conman.org' equals: (joined at: #authority).
+	self assert: '' equals: (joined at: #userinfo).! !
+
 !Rfc3986PercentEncoderTest methodsFor: 'as yet unclassified' stamp: 'jpb 1/12/2020 16:37:24'!
 setUp
 	usedClass _ Rfc3986PercentEncoder ! !
@@ -499,6 +515,10 @@ testAlgorithm2
 !GenericUri methodsFor: 'as yet unclassified' stamp: 'jpb 1/9/2020 19:59:29'!
 asString
 	^implementation asString! !
+
+!GenericUri methodsFor: 'as yet unclassified' stamp: 'jpb 2/7/2021 03:52:25'!
+asUri
+	^self! !
 
 !GenericUri methodsFor: 'as yet unclassified' stamp: 'jpb 1/19/2020 15:41:20'!
 at: componentName
@@ -590,7 +610,7 @@ asString
 
 	^uriStream contents! !
 
-!Rfc3986GenericUri methodsFor: 'as yet unclassified' stamp: 'jpb 1/19/2020 15:49:25'!
+!Rfc3986GenericUri methodsFor: 'as yet unclassified' stamp: 'jpb 2/7/2021 14:12:27'!
 at: componentName ifAbsent: absentValue
 	| name |
 	name _ componentName asString.
@@ -601,16 +621,19 @@ at: componentName ifAbsent: absentValue
 	'host' = name ifTrue: [ ^uriHost ].
 	'userinfo' = name ifTrue: [ ^uriUserinfo ].
 	'fragment' = name ifTrue: [ ^uriFragment ].
-	'port' = name ifTrue: [ ^uriPort asInteger ifNil: [ absentValue value ] ].
+	'port' = name ifTrue: [ ^uriPort ifNotEmpty: [ uriPort asNumber ] ifEmpty: [ absentValue value ] ].
 	'query' = name ifTrue: [ ^uriQuery ].! !
 
-!Rfc3986GenericUri methodsFor: 'as yet unclassified' stamp: 'jpb 1/19/2020 15:42:33'!
+!Rfc3986GenericUri methodsFor: 'as yet unclassified' stamp: 'jpb 2/7/2021 14:45:25'!
 at: componentName put: value
 	| name |
 	name _ componentName.
 	
 	'scheme' = name ifTrue: [ uriScheme _ value ].
-	'authority' = name ifTrue: [ uriAuthority _ value ].
+	'authority' = name ifTrue: [
+		 uriAuthority _ value.
+		 OMeta2Rfc3986Parser parseAuthority: uriAuthority into: self ].
+	
 	'host' = name ifTrue: [ uriHost _ value ].
 	'port' = name ifTrue: [ uriPort _ value ].
 	'userinfo' = name ifTrue: [ uriUserinfo _ value ].
